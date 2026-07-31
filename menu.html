@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Fast Food Menu</title>
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <div>
+        <!-- <p class="eyebrow">Fast Food</p> -->
+         <div class="logo"><img src="images/yummy.png" alt="Yummy logo"></div>
+       
+      </div>
+      <div class="txtbuttn">
+         <div><h1>Nos plats</h1></div>
+      </div>
+      
+    </header>
+
+    <section class="menu-grid" id="menuGrid">
+      <article class="menu-card">
+        <img src="images/panini.jpg" alt="Panini" />
+        <h2>Panini</h2>
+        <p class="ingredients">Tomato, basil, cheese</p>
+        <div class="card-footer">
+          <span class="price">$12.50</span>
+          <button class="add-btn" aria-label="Add Panini">+</button>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="Burger on plate" />
+        <h2>Burger</h2>
+        <p class="ingredients">Beef, lettuce, onion</p>
+        <div class="card-footer">
+          <span class="price">$9.00</span>
+          <button class="add-btn" aria-label="Add Burger">+</button>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/tacos.jpg" alt="Tacos" />
+        <h2>Tacos</h2>
+        <p class="ingredients">Sausage, mustard, relish</p>
+        <div class="card-footer">
+          <span class="price">$6.50</span>
+          <button class="add-btn" aria-label="Add Tacos">+</button>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/poutine.jpg" alt="Fake Poutine" />
+        <h2>Poutine</h2>
+        <p class="ingredients">Lemon, mint, soda</p>
+        <div class="card-footer">
+          <span class="price">$8.00</span>
+          <button class="add-btn" aria-label="Add Fake Poutine">+</button>
+        </div>
+      </article>
+
+      <article class="menu-card hidden-card">
+        <img src="images/pizza1.jpg" alt="Pizza" />
+        <h2>Pizza</h2>
+        <p class="ingredients">Dough, sauce, cheese</p>
+        <div class="card-footer">
+          <span class="price">$12.00</span>
+          <button class="add-btn" aria-label="Add Pizza">+</button>
+        </div>
+      </article>
+
+      <article class="menu-card hidden-card">
+        <img src="images/sandwish.jpg" alt="Sandwich" />
+        <h2>Sandwich</h2>
+        <p class="ingredients">Bread, meat, vegetables</p>
+        <div class="card-footer">
+          <span class="price">$11.00</span>
+          <button class="add-btn" aria-label="Add Sandwich">+</button>
+        </div>
+      </article>
+    </section>
+
+    <button class="view-more-btn" id="viewMoreBtn">View More</button>
+  </main>
+
+  <button class="order-fab" aria-label="Check order">Your order</button>
+
+  <div class="order-modal is-hidden" id="orderModal" aria-hidden="true">
+    <div class="order-panel">
+      <div class="order-header">
+        <h3>Your Order</h3>
+        <button class="close-modal" id="closeOrderModal" aria-label="Close order">×</button>
+      </div>
+
+      <label class="table-picker">
+        <span>Table number</span>
+        <select id="tableNumber">
+          <option value="1">Table 1</option>
+          <option value="2">Table 2</option>
+          <option value="3">Table 3</option>
+          <option value="4">Table 4</option>
+          <option value="5">Table 5</option>
+        </select>
+      </label>
+
+      <div class="order-items" id="orderItems"></div>
+
+      <div class="order-summary">
+        <span>Total</span>
+        <strong id="orderTotal">$0.00</strong>
+      </div>
+
+      <button class="confirm-btn" id="confirmOrderBtn">Confirm Order</button>
+    </div>
+  </div>
+
+  <script src="menu.js"></script>
+</body>
+</html>
